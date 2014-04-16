@@ -112,7 +112,7 @@
 }
 
 .support.function {
-  color: @green;
+  color: darken(@slate, 15%);
 }
 
 .string, .constant.other.symbol, .entity.other.inherited-class {
@@ -214,7 +214,8 @@
 }
 
 .constant.other.color {
-  color: @green;
+  background: transparent;
+  color: fadeout(@yellow, 15%);
 }
 
 .string.regexp {
