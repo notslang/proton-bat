@@ -1,7 +1,7 @@
 {
   "name": "neutron-batman-js-syntax",
   "theme": "syntax",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Syntax theme inspired by BatmanJS for the Neutron UI theme",
   "repository": "https://github.com/simko-io/neutron-batmanjs-syntax",
   "license": "MIT",
