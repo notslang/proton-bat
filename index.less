@@ -1,0 +1,269 @@
+
+@purple: #805DB2;
+@purple-2: #C8C7E7;
+@purple-3: #D5D3ED;
+@purple-4: #EAEBFA;
+@yellow: #FFE43F;
+@red: #DF0349;
+@slate: #8FA1B3;
+@green: #9BC753;
+@background: #2E3239;
+@text: @purple-3;
+
+.editor, .editor .gutter {
+  background-color: @background;
+  color: @text;
+}
+
+.editor {
+  font-family: "Inconsolata-g", Inconsolata, Monaco, Consolas, 'Courier New';
+  line-height: 1.5;
+
+  .gutter {
+    color: darken(#838891, 10%);
+    background: darken(@background, 1%);
+    .cursor-line {
+      color: @text;
+    }
+  }
+
+  .indent-guide {
+    color: #343D46;
+  }
+}
+
+.editor.is-focused .cursor {
+  border-color: #fff;
+  transition: opacity .5s ease-in-out;
+  &.blink-off {
+    visibility: visible;
+    opacity: 0;
+  }
+}
+
+.vim-mode.command-mode.editor.is-focused .cursor {
+  background-color: #fff;
+  opacity: 0.8;
+  &.blink-off {
+    visibility: visible;
+    opacity: 0.2;
+  }
+}
+
+.editor.is-focused .selection .region {
+  background-color: #546373;
+}
+
+.editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line {
+  background-color: #343D46;
+}
+
+.variable.parameter.function {
+  color: @text;
+}
+
+.comment, .punctuation.definition.comment {
+  color: #65737e;
+}
+
+.invisible-character {
+  color: darken(@purple, 15%);
+}
+
+.punctuation.definition.string, .punctuation.definition.variable, .punctuation.definition.string, .punctuation.definition.parameters, .punctuation.definition.string, .punctuation.definition.array {
+  color: @text;
+}
+
+.punctuation.definition.string {
+  background: transparent;
+  color: @red;
+}
+
+.keyword.operator {
+  color: @text;
+}
+
+.keyword {
+  color: @purple-2;
+}
+
+.variable {
+  color: lighten(@purple, 20%);
+}
+
+.entity.name.function, .meta.require, .support.function.any-method {
+  color: darken(@slate, 15%);
+}
+
+.support.class, .entity.name.class, .entity.name.type.class {
+  color: @yellow;
+}
+
+.meta.class {
+  color: #eff1f5;
+}
+
+.keyword.other.special-method {
+  color: darken(@slate, 15%);
+}
+
+.storage {
+  color: @purple;
+}
+
+.support.function {
+  color: @green;
+}
+
+.string, .constant.other.symbol, .entity.other.inherited-class {
+  background: fadeout(@red, 90%);
+  color: @red;
+}
+
+.constant.numeric {
+  background: transparent;
+  color: @purple;
+}
+
+.constant {
+  background: fadeout(@yellow, 90%);
+  color: fadeout(@yellow, 15%);
+}
+
+.entity.name.tag {
+  color: @purple;
+}
+
+.entity.other.attribute-name {
+  color: @purple;
+}
+
+.entity.other.attribute-name.id, .punctuation.definition.entity {
+  color: darken(@slate, 15%);
+}
+
+.meta.selector {
+  color: @purple;
+}
+
+.none {
+  color: @purple;
+}
+
+.markup.heading .punctuation.definition.heading, .entity.name.section {
+  color: darken(@slate, 15%);
+}
+
+.keyword.other.unit {
+  color: @purple;
+}
+
+.markup.bold, .punctuation.definition.bold {
+  font-weight: bold;
+  color: @yellow;
+}
+
+.markup.italic, .punctuation.definition.italic {
+  font-style: italic;
+  color: @purple;
+}
+
+.markup.raw.inline {
+  color: @green;
+}
+
+.string.other.link {
+  color: @yellow;
+}
+
+.meta.link {
+  color: @purple;
+}
+
+.markup.list {
+  color: @yellow;
+}
+
+.markup.quote {
+  color: @purple;
+}
+
+.meta.separator {
+  color: @text;
+  background-color: #4f5b66;
+}
+
+.markup.inserted, .markup.inserted.git_gutter {
+  color: @yellow;
+}
+
+.markup.deleted, .markup.deleted.git_gutter {
+  color: @red;
+}
+
+.markup.changed, .markup.changed.git_gutter {
+  color: @purple;
+}
+
+.markup.ignored, .markup.ignored.git_gutter {
+  color: #4f5b66;
+}
+
+.markup.untracked, .markup.untracked.git_gutter {
+  color: lighten(@background, 20%);
+}
+
+.constant.other.color {
+  color: @green;
+}
+
+.string.regexp {
+  color: @green;
+}
+
+.constant.character.escape {
+  color: @green;
+}
+
+.punctuation.section.embedded, .variable.interpolation {
+  color: @purple-3;
+}
+
+.invalid.illegal {
+  color: @background;
+  background-color: @yellow;
+}
+
+.sublimelinter.gutter-mark {
+  color: #FFFFFF;
+}
+
+.sublimelinter.mark.warning {
+  color: @yellow;
+}
+
+.sublimelinter.mark.error {
+  color: @red;
+}
+
+.editor .gutter .line-number.git-line-modified {
+  border-left-color: @yellow;
+}
+
+.editor .gutter .line-number.git-line-added {
+  border-left-color: @green;
+}
+
+.editor .gutter .line-number.git-line-removed {
+  border-left-color: @red;
+}
+
+.status-modified,
+.list-group li:not(.list-nested-item).status-modified, .list-tree li:not(.list-nested-item).status-modified, .list-group li.list-nested-item.status-modified > .list-item, .list-tree li.list-nested-item.status-modified > .list-item {
+  color: fadeout(overlay(@yellow, darken(white, 40%)), 25%) !important;
+}
+
+.status-added,
+.list-group li:not(.list-nested-item).status-added, .list-tree li:not(.list-nested-item).status-added, .list-group li.list-nested-item.status-added > .list-item, .list-tree li.list-nested-item.status-added > .list-item {
+  color: fadeout(@purple, 25%) !important;
+}
