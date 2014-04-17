@@ -42,7 +42,7 @@
 }
 
 .vim-mode.command-mode.editor.is-focused .cursor {
-  background-color: #fff;
+  background: #fff;
   opacity: 0.8;
   &.blink-off {
     visibility: visible;
@@ -232,8 +232,8 @@
 }
 
 .invalid.illegal {
-  color: @background;
-  background-color: @yellow;
+  background: fadeout(@yellow, 90%);
+  color: @red;
 }
 
 .sublimelinter.gutter-mark {
