@@ -1,0 +1,15 @@
+{
+  "name": "proton-batman",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "private": false,
+  "description": "A BatmanJS-inspired syntax for the Proton UI theme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simko-io/proton-batman"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.39.0"
+  }
+}
