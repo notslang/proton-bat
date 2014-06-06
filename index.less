@@ -21,7 +21,7 @@
 
   .gutter {
     color: darken(#838891, 10%);
-    background: darken(@background, 1%);
+    background: darken(@background, 2%);
     .cursor-line {
       color: @text;
     }
@@ -233,7 +233,7 @@
 }
 
 .selection .region {
-  background-color: lighten(@syntax-background-color, 10%);
+  background-color: lighten(@background, 10%);
 }
 
 // Editor Tweaks
@@ -293,11 +293,11 @@
 // Terminal Styles
 
 .term2 {
-  border: 5px solid @syntax-background-color;
+  border: 5px solid @background;
 }
 
 .terminal {
-  background-color: @syntax-background-color !important;
+  background-color: @background !important;
 }
 
 .terminal .cursor {
@@ -305,7 +305,7 @@
 }
 
 .terminal .color-0 {
-  color: @syntax-text-color;
+  color: @text;
 }
 
 .terminal .color-1 {
