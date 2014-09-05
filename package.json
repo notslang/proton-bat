@@ -1,7 +1,7 @@
 {
   "name": "proton-bat",
   "theme": "syntax",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "private": false,
   "description": "A Proton UI theme inspired by Shopify's BatmanJS",
   "repository": {
