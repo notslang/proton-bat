@@ -3,10 +3,10 @@
   "theme": "syntax",
   "version": "0.4.0",
   "private": false,
-  "description": "A BatmanJS-inspired syntax for the Proton UI theme",
+  "description": "A Proton UI theme inspired by Shopify's BatmanJS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/simko-io/proton-batman"
+    "url": "https://github.com/jdsimcoe/proton-batman"
   },
   "license": "MIT",
   "engines": {

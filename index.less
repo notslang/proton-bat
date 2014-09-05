@@ -16,12 +16,11 @@
 }
 
 .editor {
-  font-family: "Inconsolata-g", Inconsolata, Monaco, Consolas, 'Courier New';
-  line-height: 1.5;
 
   .gutter {
     color: darken(#838891, 10%);
-    background: darken(@background, 2%);
+    background: @background;
+
     .cursor-line {
       color: @text;
     }
@@ -189,26 +188,6 @@
   background-color: #4f5b66;
 }
 
-.markup.inserted, .markup.inserted.git_gutter {
-  color: @yellow;
-}
-
-.markup.deleted, .markup.deleted.git_gutter {
-  color: @red;
-}
-
-.markup.changed, .markup.changed.git_gutter {
-  color: @purple;
-}
-
-.markup.ignored, .markup.ignored.git_gutter {
-  color: #4f5b66;
-}
-
-.markup.untracked, .markup.untracked.git_gutter {
-  color: lighten(@background, 20%);
-}
-
 .constant.other.color {
   background: transparent;
   color: fadeout(@yellow, 15%);
@@ -238,16 +217,6 @@
 
 // Editor Tweaks
 
-.editor .gutter .line-number {
-  padding-left: 1em;
-
-  &.git-line-added,
-  &.git-line-modified,
-  &.git-line-removed, {
-    padding-left: calc(1em - 2px)
-  }
-}
-
 .editor .fold-marker:after {
   font-size: 1.6em;
   line-height: 0.8;
@@ -268,26 +237,30 @@
   color: @red;
 }
 
-.editor .gutter .line-number.git-line-modified {
-  border-left-color: @yellow;
+// Editor Tweaks
+
+.editor .gutter .line-number,
+.editor.react .gutter .line-number {
+
+  &.git-line-added {
+    border-left: 2px solid @green;
+  }
+
+  &.git-line-modified {
+    border-left: 2px solid @yellow;
+  }
+
+  &.git-line-removed {
+    border-left: 2px solid @red;
+  }
 }
 
-.editor .gutter .line-number.git-line-added {
-  border-left-color: @green;
-}
-
-.editor .gutter .line-number.git-line-removed {
-  border-left-color: @red;
-}
-
-.status-modified,
-.list-group li:not(.list-nested-item).status-modified, .list-tree li:not(.list-nested-item).status-modified, .list-group li.list-nested-item.status-modified > .list-item, .list-tree li.list-nested-item.status-modified > .list-item {
-  color: fadeout(overlay(@yellow, darken(white, 40%)), 25%) !important;
-}
-
-.status-added,
-.list-group li:not(.list-nested-item).status-added, .list-tree li:not(.list-nested-item).status-added, .list-group li.list-nested-item.status-added > .list-item, .list-tree li.list-nested-item.status-added > .list-item {
-  color: fadeout(@purple, 25%) !important;
+.editor .fold-marker:after {
+  font-size: 1.6em;
+  line-height: 0.8;
+  width: 1.2em;
+  position: relative;
+  top: 2px;
 }
 
 // Terminal Styles
