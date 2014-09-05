@@ -1,12 +1,12 @@
 {
-  "name": "proton-batman",
+  "name": "proton-bat",
   "theme": "syntax",
   "version": "0.4.0",
   "private": false,
   "description": "A Proton UI theme inspired by Shopify's BatmanJS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jdsimcoe/proton-batman"
+    "url": "https://github.com/jdsimcoe/proton-bat"
   },
   "license": "MIT",
   "engines": {
